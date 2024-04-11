@@ -28,6 +28,3 @@ def create_twiter_dataset(username, no_of_tweets):
     df.to_csv(name)
     return df.head()
 
-p = create_twiter_dataset('Colpensiones', 1000)
-
-print(p)
