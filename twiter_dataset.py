@@ -4,15 +4,7 @@ import pandas as pd
 def create_twiter_dataset(username, no_of_tweets):
     scraper = Nitter(log_level=1, skip_instance_check=False)
     tweets = scraper.get_tweets(username, mode="user", number=no_of_tweets)
-    data = {
-    'link':[],
-    'text':[],
-    'user':[],
-    'likes':[],
-    'quotes':[],
-    'retweets':[],
-    'comments':[]
-    }
+    data = {'link':[], 'text':[], 'user':[], 'likes':[], 'quotes':[], 'retweets':[], 'comments':[]}
 
     for tweet in tweets['tweets']:
         data['link'].append(tweet['link'])
